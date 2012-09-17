@@ -1,4 +1,4 @@
-package si.nej.hudson.plugins;
+package com.previousnext.jenkins.plugins;
 import hudson.Launcher;
 import hudson.Extension;
 import hudson.FilePath;

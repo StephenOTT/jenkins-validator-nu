@@ -7,13 +7,13 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
 
-  <groupId>si.nej.hudson.plugins</groupId>
+  <groupId>com.previousnext.jenkins.plugins</groupId>
   <artifactId>nu</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>hpi</packaging>
   <name>NU Validation Plugin</name>
   <description>Adds W3C's NU Validator to Jenkins.</description>
-  <url>http://wiki.jenkins-ci.org/display/HUDSON/NU+Plugin</url>
+  <url>https://github.com/previousnext/jenkins-validator-nu</url>
 
   <developers>
     <developer>

@@ -1,4 +1,4 @@
-package si.nej.hudson.plugins;
+package com.previousnext.jenkins.plugins;
 
 /**
  *

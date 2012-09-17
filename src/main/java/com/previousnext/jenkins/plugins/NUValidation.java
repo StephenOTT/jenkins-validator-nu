@@ -1,4 +1,4 @@
-package si.nej.hudson.plugins;
+package com.previousnext.jenkins.plugins;
 
 import java.io.IOException;
 import java.net.URLEncoder;
@@ -9,19 +9,13 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 import org.jsoup.Connection;
-import org.jsoup.Jsoup;
 import org.jsoup.helper.HttpConnection;
 
 /**
  *
- * @author jernejz
+ * @author William McRae
  */
 public class NUValidation {
-
-    // constants
-    public static final String UNICORN_TASK = "conformance";    // all possible observers
-    public static final String CONNECT_USERAGENT = "Mozilla";   // doesn't really matter which useragent you use
-    public static final int CONNECT_TIMEOUT = 60000;            // 1 minute should be enough for Unicorn to return results
 
     private List<Observation> observations;
     private String validatorUrl;
@@ -67,9 +61,9 @@ public class NUValidation {
             .data("doc", siteUrl)
             .data("schema", "http://s.validator.nu/w3c-html5-microdata-rdfa.rnc http://s.validator.nu/html5/assertions.sch http://c.validator.nu/base/ http://c.validator.nu/microdata/")
             .data("out", "json")
-            .userAgent(CONNECT_USERAGENT)
+            .userAgent("Mozilla")
             .cookie("auth", "token")
-            .timeout(CONNECT_TIMEOUT)
+            .timeout(60000)
             .method(Connection.Method.GET)
             .ignoreContentType(true);
 
